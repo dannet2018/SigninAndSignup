@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 10px;
+        }
+        .form-container {
+            background: white;
+            width: 300px;
+            padding: 20px;
+            margin: 10px auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="text"], input[type="password"], input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: whiteblack;
+            padding: 20px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 80%;
+        }
+        button:hover {
+            opacity: 1;
+        }
+        .container {
+            padding: 40px;
+        }
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form action="/submit-login" method="post">
+        <h2>Login</h2>
+        <label for="email"><b>Email Address</b></label>
+        <input type="email" placeholder="Enter Email" name="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <button type="submit">Login</button>
+        <div class="container text-center">
+            <span class="psw">Forgot <a href="#">password?</a></span>
+            <div>or</div>
+            <span class="create-account">No account? <a href="#">Create one</a></span>
+        </div>
+    </form>
+</div>
+
+<div class="form-container">
+    <form action="/submit-registration" method="post">
+        <h2>Register</h2>
+        <label for="email"><b>Email Address</b></label>
+        <input type="email" placeholder="Enter Email" name="email" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+
+        <label for="psw-repeat"><b>Confirm Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" required>
+
+        <button type="submit">Sign Up</button>
+        <div class="container text-center">
+            <label>
+                <input type="checkbox" checked="checked" name="agree"> I agree to the <a href="#">Terms & Privacy</a>
+            </label>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
